@@ -352,7 +352,7 @@ export default function App() {
         <div className="wide">
           <div style={{ fontSize: 12, color: 'var(--mut)', marginBottom: 6 }}>Bottom-left number by time (used when “By time” is selected). Type any number or text, start and end in m:ss.</div>
           {NB.map(o => (
-            <div className="mrow" key={o.id} style={{ gridTemplateColumns: '80px 70px 70px 36px' }}>
+            <div className="mrow number-row" key={o.id}>
               <input type="text" placeholder="No." value={o.v} onChange={e => upd(setNB, o.id, { v: e.target.value })} />
               <input type="text" value={o.a} onChange={e => upd(setNB, o.id, { a: e.target.value })} />
               <input type="text" value={o.b} onChange={e => upd(setNB, o.id, { b: e.target.value })} />
@@ -441,7 +441,7 @@ export default function App() {
 <div className="wide">
           <div style={{ fontSize: 12, color: 'var(--mut)', marginBottom: 6 }}>Exercise name by time (m:ss). While a row is active it replaces the bottom-left title; outside every row, the title you typed on the video shows.</div>
           {NM.map(o => (
-            <div className="mrow" key={o.id} style={{ gridTemplateColumns: '2fr 70px 70px 36px' }}>
+            <div className="mrow name-row" key={o.id}>
               <input type="text" placeholder="Exercise name" value={o.t} onChange={e => upd(setNM, o.id, { t: e.target.value })} />
               <input type="text" value={o.a} onChange={e => upd(setNM, o.id, { a: e.target.value })} />
               <input type="text" value={o.b} onChange={e => upd(setNM, o.id, { b: e.target.value })} />
